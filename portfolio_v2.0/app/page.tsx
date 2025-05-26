@@ -6,19 +6,17 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
 
-    <div>
-      <nav>
+    <div className="flex flex-col min-h-screen">
       <Navbar></Navbar>
-        <div className="flex">
-          {/* <div className="paths">
-            <a href="">Home</a>
-            <a href="">Experience</a>
-            <a href="">home</a>
-            <a href="">home</a>
-          </div> */}
+      <section className="Home flex flex-col">
+        <h1 className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl">
+          Ayman msaoub
+        </h1>
 
-        </div>
-      </nav>
+        <h1 className="text-4xl text-[var(--color-accent-dark)] font-bold ml-10 mb-10 md:text-6xl lg:text-8xl">
+          Frontend Developer
+        </h1>
+      </section>
     </div>
   );
 }

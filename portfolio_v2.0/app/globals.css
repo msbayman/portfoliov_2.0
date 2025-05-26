@@ -2,12 +2,12 @@
 
 :root {
 
-  --color-primary: #0F172A;
-  --color-secondary: #1E293B;
-  --color-muted: #94A3B8;
+  --color-primary: #252833;
+  --color-secondary: #252833;
+  --color-muted: ##303641;
   --color-text-primary: #E2E8F0;
-  --color-accent: #22C55E;
-  --color-accent-dark: #16A34A;
+  --color-accent: ##28c392;
+  --color-accent-dark: #2bc196;
 }
 
 @theme inline {
@@ -25,7 +25,7 @@
 }
 
 body {
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-colfax)  , Helvetica, sans-serif;
 }

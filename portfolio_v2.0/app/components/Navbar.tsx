@@ -8,13 +8,13 @@ export default function Navbar() {
     return (
         <>
             {/* NAVBAR */}
-            <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-50 border-b-[0.1px] border-[var(--color-muted)] md:px-10 lg:px-20">
-                <h1>Miyamoto</h1>
+            <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-50 border-b-[1px] border-b-gray-600 border-[var(--color-muted)] md:px-10 lg:px-20">
+                <h1 className="font-bold lg:text-2xl">Miyamoto</h1>
                 {/* Desktop Nav */}
-                <ul className="hidden md:flex space-x-6">
-                    <li><a href="/" className="hover:underline">Home</a></li>
-                    <li><a href="/about" className="hover:underline">About</a></li>
-                    <li><a href="/contact" className="hover:underline">Contact</a></li>
+                <ul className="hidden md:flex space-x-6 ">
+                    <li><a href="/" className="hover:text-white lg:text-2xl">Home</a></li>
+                    <li><a href="/about" className="hover:text-white lg:text-2xl">About</a></li>
+                    <li><a href="/contact" className="hover:text-white lg:text-2xl">Contact</a></li>
                 </ul>
 
                 {/* Hamburger Button (Mobile) */}

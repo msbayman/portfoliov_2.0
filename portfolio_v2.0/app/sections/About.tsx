@@ -1,6 +1,28 @@
 import React from 'react'
 import Skill_div from '../components/Skill_div'
 
+
+
+const skills : string[] = 
+[
+    'Html',
+    'Css',
+    'Javascript',
+    'Typescript',
+    'React',
+    'Nextjs',
+    'Tailwindcss',
+    'Redux',
+    'Rest api',
+    'Git',
+    'Docker',
+    'Bash',
+    'C',
+    'C++',
+    'Django'
+]   
+
+
 const About = () => {
     return (
         <div className='flex flex-col md:flex-row' >
@@ -17,21 +39,9 @@ const About = () => {
                 <h1 className=' text-4xl  mb-4  md:text-6xl md:mb-8'>Skills</h1>
                 <div
                 className='flex flex-wrap justify-center gap-4 max-w-2xl'>
-                <Skill_div text='Html'/>
-                <Skill_div text='Css' />
-                <Skill_div text='Javascript' />
-                <Skill_div text='Typescript' />
-                <Skill_div text='React' />  
-                <Skill_div text='Nextjs' />
-                <Skill_div text='Tailwindcss' />
-                <Skill_div text='Redux' />
-                <Skill_div text='Rest api' />
-                <Skill_div text='Git' />
-                <Skill_div text='Docker' />
-                <Skill_div text='Bash' />
-                <Skill_div text='C' />
-                <Skill_div text='C++' />
-                <Skill_div text='Django' />
+                    {skills.map((skill, index) => (
+                        <Skill_div key={index} text={skill} />
+                    ))}
                 </div>
             </section>
         </div>

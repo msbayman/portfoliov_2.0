@@ -4,6 +4,7 @@ import { use } from "react";
 import Navbar from "./components/Navbar";
 import Btn_accent_green from "./components/Btn_accent_green";
 import About from "./sections/About";
+import Projects from "./sections/Projects";
 
 export default function Home() {
   return (
@@ -26,21 +27,24 @@ export default function Home() {
           and React.</p>
         {/* <Btn_accent_green text="Contact Me" /> */}
 
-          <a href="#about">
-        <div className="flex flex-col items-center h-full opacity-70 mt-20 justify-center   mb-10 lg:mb-20 hover:cursor-pointer  transition-all duration-300 ease-in-out hover:opacity-100"> 
-          <h1 className="lg:text-3xl font-light  ">see  more info</h1>
+        <a href="#about">
+          <div className="flex flex-col items-center h-full opacity-70 mt-20 justify-center   mb-10 lg:mb-20 hover:cursor-pointer  transition-all duration-300 ease-in-out hover:opacity-100">
+            <h1 className="lg:text-3xl font-light  ">see  more info</h1>
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down "><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
-        </div>
-          </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down "><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
+          </div>
+        </a>
 
 
       </section>
 
-    <div id="about">
+      <div id="about">
+        <About />
+      </div>
 
-      <About />
-    </div>
+      <div id="projects">
+        <Projects/>
+      </div>
 
 
     </div>

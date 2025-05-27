@@ -3,29 +3,29 @@ import Skill_div from '../components/Skill_div'
 
 
 
-const skills : string[] = 
-[
-    'Html',
-    'Css',
-    'Javascript',
-    'Typescript',
-    'React',
-    'Nextjs',
-    'Tailwindcss',
-    'Redux',
-    'Rest api',
-    'Git',
-    'Docker',
-    'Bash',
-    'C',
-    'C++',
-    'Django'
-]   
+const skills: string[] =
+    [
+        'Html',
+        'Css',
+        'Javascript',
+        'Typescript',
+        'React',
+        'Nextjs',
+        'Tailwindcss',
+        'Redux',
+        'Rest api',
+        'Git',
+        'Docker',
+        'Bash',
+        'C',
+        'C++',
+        'Django'
+    ]
 
 
 const About = () => {
     return (
-        <div className='flex flex-col md:flex-row' >
+        <div className='flex flex-col max-h-min  md:flex-row' >
             <section className=' flex flex-1 flex-col items-center justify-center p-5'>
                 <h1 className='text-4xl mb-4 md:text-6xl md:mb-8'>About Me</h1>
                 <p className='text-lg text-start max-w-2xl'>
@@ -38,7 +38,7 @@ const About = () => {
             <section className='flex flex-1 flex-col items-center   p-5'>
                 <h1 className=' text-4xl  mb-4  md:text-6xl md:mb-8'>Skills</h1>
                 <div
-                className='flex flex-wrap justify-center gap-4 max-w-2xl'>
+                    className='flex flex-wrap justify-center gap-4 max-w-2xl'>
                     {skills.map((skill, index) => (
                         <Skill_div key={index} text={skill} />
                     ))}

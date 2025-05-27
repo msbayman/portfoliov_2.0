@@ -17,21 +17,21 @@ const About = () => {
                 <h1 className=' text-4xl  mb-4  md:text-6xl md:mb-8'>Skills</h1>
                 <div
                 className='flex flex-wrap justify-center gap-4 max-w-2xl'>
-                <Skill_div text='html'/>
-                <Skill_div text='css' />
-                <Skill_div text='javascript' />
-                <Skill_div text='typescript' />
-                <Skill_div text='react' />  
-                <Skill_div text='nextjs' />
-                <Skill_div text='tailwindcss' />
-                <Skill_div text='redux' />
-                <Skill_div text='rest api' />
-                <Skill_div text='git' />
-                <Skill_div text='docker' />
-                <Skill_div text='bash' />
-                <Skill_div text='c' />
-                <Skill_div text='c++' />
-                <Skill_div text='django' />
+                <Skill_div text='Html'/>
+                <Skill_div text='Css' />
+                <Skill_div text='Javascript' />
+                <Skill_div text='Typescript' />
+                <Skill_div text='React' />  
+                <Skill_div text='Nextjs' />
+                <Skill_div text='Tailwindcss' />
+                <Skill_div text='Redux' />
+                <Skill_div text='Rest api' />
+                <Skill_div text='Git' />
+                <Skill_div text='Docker' />
+                <Skill_div text='Bash' />
+                <Skill_div text='C' />
+                <Skill_div text='C++' />
+                <Skill_div text='Django' />
                 </div>
             </section>
         </div>

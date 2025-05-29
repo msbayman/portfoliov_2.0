@@ -6,6 +6,10 @@ import Btn_accent_green from "./components/Btn_accent_green";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
+import { Contact } from "lucide-react";
+import Contacts from "./sections/contacts";
+import { IoIosCodeDownload, IoMdDownload } from "react-icons/io";
+import DrawOutlineButton from "./components/DrawOutlineButton";
 
 export default function Home() {
   return (
@@ -26,7 +30,16 @@ export default function Home() {
         <p className="text-sm text-[var(--color-text-secondary)] ml-10 mb-10 md:text-xl lg:text-1xl lg:ml-11 lg:mb-20">
           I have experience in HTML, CSS, JavaScript,
           and React.</p>
-        {/* <Btn_accent_green text="Contact Me" /> */}
+        {/* <Btn_accent_green text="resume "  /> */}
+        <div className="flex w-full items-center justify-center">
+
+          <a href="../../public/Ayman_Msaoub_Resume.pdf" download="Ayman_Msaoub_Resume.pdf" className="flex items-center justify-center">
+            <DrawOutlineButton className="flex items-center justify-center ml-30 mb-10">
+              <IoIosCodeDownload className="size-36 " />
+            </DrawOutlineButton>
+
+          </a>
+        </div>
 
         <a href="#about">
           <div className="flex flex-col items-center h-full opacity-70 mt-20 justify-center   mb-10 lg:mb-20 hover:cursor-pointer  transition-all duration-300 ease-in-out hover:opacity-100">
@@ -43,15 +56,23 @@ export default function Home() {
         <About />
       </div>
 
-      <div id="projects" className="w-full h-fit flex items-center justify-center">
+      <div id="Projects" className="w-full h-fit flex items-center justify-center">
         <Projects />
       </div>
 
-      <div id="expeiences" className="w-full h-fit flex items-center justify-center" >
+      <div id="Experiences" className="w-full h-fit flex items-center justify-center" >
         <Experience
         />
-</div>
+      </div>
+
+
+
+      <div id="Contact" className="w-full h-fit flex items-center justify-center" >
+        <Contacts></Contacts>
+      </div>
+
     </div>
+
   );
 }
 

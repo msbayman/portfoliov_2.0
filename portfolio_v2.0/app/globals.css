@@ -17,6 +17,11 @@ html{
   --color-accent-blue: #28385a;
 }
 
+::selection {
+  background-color: #28c392;
+  color: white;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

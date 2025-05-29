@@ -12,9 +12,11 @@ export default function Navbar() {
                 <h1 className="font-bold lg:text-2xl">0x0Miyamoto</h1>
                 {/* Desktop Nav */}
                 <ul className="hidden md:flex space-x-6 ">
-                    <li><a href="/" className="hover:text-white lg:text-2xl">Home</a></li>
-                    <li><a href="/about" className="hover:text-white lg:text-2xl">About</a></li>
-                    <li><a href="/contact" className="hover:text-white lg:text-2xl">Contact</a></li>
+                    <li><a href="/" className="hover:text-white md:text-md lg:text-2xl">Home</a></li>
+                    <li><a href="#about" className="hover:text-white md:text-md lg:text-2xl">About</a></li>
+                    <li><a href="#Projects" className="hover:text-white md:text-md lg:text-2xl">Projects</a></li>
+                    <li><a href="#Experiences" className="hover:text-white md:text-md lg:text-2xl">Experiences</a></li>
+                    <li><a href="#Contact" className="hover:text-white md:text-md lg:text-2xl">Contact</a></li>
                 </ul>
 
                 {/* Hamburger Button (Mobile) */}
@@ -33,8 +35,8 @@ export default function Navbar() {
             >
                 <ul className="flex flex-col space-y-6 text-lg">
                     <li><a href="/" onClick={() => setOpen(false)} className="hover:underline">Home</a></li>
-                    <li><a href="/about" onClick={() => setOpen(false)} className="hover:underline">About</a></li>
-                    <li><a href="/contact" onClick={() => setOpen(false)} className="hover:underline">Contact</a></li>
+                    <li><a href="#about" onClick={() => setOpen(false)} className="hover:underline">About</a></li>
+                    <li><a href="#contact" onClick={() => setOpen(false)} className="hover:underline">Contact</a></li>
                 </ul>
             </div>
 

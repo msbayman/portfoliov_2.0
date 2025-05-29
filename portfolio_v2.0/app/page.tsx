@@ -33,7 +33,7 @@ export default function Home() {
         {/* <Btn_accent_green text="resume "  /> */}
         <div className="flex w-full items-center justify-center">
 
-          <a href="../../public/Ayman_Msaoub_Resume.pdf" download="Ayman_Msaoub_Resume.pdf" className="flex items-center justify-center">
+          <a href="../../public/Ayman_Msaoub_front.pdf" download="Ayman_Msaoub_Resume.pdf" className="flex items-center justify-center">
             <DrawOutlineButton className="flex items-center justify-center ml-30 mb-10">
               <IoIosCodeDownload className="size-36 " />
             </DrawOutlineButton>

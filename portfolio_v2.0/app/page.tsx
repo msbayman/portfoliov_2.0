@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Btn_accent_green from "./components/Btn_accent_green";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         </h1>
 
         <h1 className="text-4xl text-[var(--color-accent-dark)] font-bold ml-10 mb-10 md:text-6xl lg:text-8xl">
-          Frontend Developer
+          Frontend Developer{" </>"}
         </h1>
         <p className="text-sm text-[var(--color-text-secondary)] ml-10  md:text-xl lg:text-1xl lg:ml-11 lg:mb-2">
           I am a frontend developer with a passion for creating beautiful and
@@ -42,11 +43,14 @@ export default function Home() {
         <About />
       </div>
 
-      <div id="projects" className="w-fit flex items-center justify-center">
+      <div id="projects" className="w-full h-fit flex items-center justify-center">
         <Projects />
       </div>
 
-
+      <div id="expeiences" className="w-full h-fit flex items-center justify-center" >
+        <Experience
+        />
+</div>
     </div>
   );
 }

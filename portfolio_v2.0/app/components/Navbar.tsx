@@ -9,7 +9,7 @@ export default function Navbar() {
         <>
             {/* NAVBAR */}
             <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-50 border-b-[1px] border-b-gray-600 border-[var(--color-muted)] md:px-10 lg:px-20">
-                <h1 className="font-bold lg:text-2xl">Miyamoto</h1>
+                <h1 className="font-bold lg:text-2xl">0x0Miyamoto</h1>
                 {/* Desktop Nav */}
                 <ul className="hidden md:flex space-x-6 ">
                     <li><a href="/" className="hover:text-white lg:text-2xl">Home</a></li>

@@ -10,6 +10,7 @@ import { Contact } from "lucide-react";
 import Contacts from "./sections/contacts";
 import { IoIosCodeDownload, IoMdDownload } from "react-icons/io";
 import DrawOutlineButton from "./components/DrawOutlineButton";
+import BlurText from "./components/BlurText";
 
 export default function Home() {
   return (
@@ -17,10 +18,20 @@ export default function Home() {
     <div className="flex flex-col min-h-svh ">
       <Navbar></Navbar>
       <section className="Home min-h-screen flex flex-col">
-        <h1 className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl">
-          Ayman msaoub
-        </h1>
+        {/* <h1 className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl"> */}
+          {/* Ayman msaoub */}
+        {/* </h1> */}
+        
 
+
+        <BlurText 
+          text="ayman msaoub"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          // onAnimationComplete={handleAnimationComplete}
+          className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl"
+        />
         <h1 className="text-4xl text-[var(--color-accent-dark)] font-bold ml-10 mb-10 md:text-6xl lg:text-8xl">
           Frontend Developer{" </>"}
         </h1>

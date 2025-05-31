@@ -1,5 +1,6 @@
 // components/ItemList.tsx
 import React from 'react';
+// import Magnet from './Magnet';
 
 type Item = {
     date: string;
@@ -15,6 +16,8 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
     return (
         <>
             {items.map((item, index) => (
+                // <Magnet key={index} className="w-full">
+
                 <div key={index} className="div_proj flex w-fit mb-6">
                     <div className="date_proj text-xl flex items-center px-3 text-[var(--color-accent)] w-fit">
                         {item.date}
@@ -28,6 +31,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
                         </div>
                     </div>
                 </div>
+                // </Magnet>
             ))}
         </>
     );

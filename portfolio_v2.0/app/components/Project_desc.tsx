@@ -1,4 +1,5 @@
 import React from 'react';
+import Magnet from './Magnet';
 
 const projects = [
     {
@@ -23,6 +24,7 @@ const Project_desc = () => {
     return (
         <>
             {projects.map((project, index) => (
+                <Magnet key={index} className="w-full">
                 <div key={index} className="div_proj flex w-fit mb-6">
                     <div className="date_proj text-xl flex items-center px-3 text-[var(--color-accent)] w-fit">
                         {project.date}
@@ -36,6 +38,7 @@ const Project_desc = () => {
                         </div>
                     </div>
                 </div>
+                    </Magnet>
             ))}
         </>
     );

@@ -23,7 +23,7 @@ const Experience = () => {
                     direction="vertical"
                     reverse={false}
                     duration={1.2}
-                    ease="bounce.out"
+                    // ease="bounce.out"
                     initialOpacity={0.2}
                     animateOpacity
                     scale={1.1}

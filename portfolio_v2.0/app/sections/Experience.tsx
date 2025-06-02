@@ -1,6 +1,7 @@
 // components/Experience.tsx
 import React from 'react';
 import ItemList from '../components/ItemList';
+import AnimatedContent from '../components/AnimatedContent';
 
 
 const experiences = [
@@ -15,7 +16,23 @@ const Experience = () => {
         <div className='flex flex-col items-center mt-20 md:mt-80 p-5 w-full'>
             <h1 className='text-4xl mb-10 md:text-6xl md:mb-20'>Experiences</h1>
             <div className="proj_list flex flex-col items-center justify-start gap-10 max-w-2xl w-full">
-                <ItemList items={experiences} />
+
+
+                <AnimatedContent
+                    distance={150}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="bounce.out"
+                    initialOpacity={0.2}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={0.3}
+                >
+                    <ItemList items={experiences} />
+                </AnimatedContent>
+
             </div>
         </div>
     );

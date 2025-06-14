@@ -36,7 +36,9 @@ export default function Navbar() {
                 <ul className="flex flex-col space-y-6 text-lg">
                     <li><a href="/" onClick={() => setOpen(false)} className="hover:underline">Home</a></li>
                     <li><a href="#about" onClick={() => setOpen(false)} className="hover:underline">About</a></li>
-                    <li><a href="#contact" onClick={() => setOpen(false)} className="hover:underline">Contact</a></li>
+                    <li><a href="#Projects"  onClick={() => setOpen(false)} className="hover:underline">Projects</a></li>
+                    <li><a href="#Experiences"  onClick={() => setOpen(false)} className="hover:underline">Experiences</a></li>
+                    <li><a href="#Contact"  onClick={() => setOpen(false)} className="hover:underline">Contact</a></li>
                 </ul>
             </div>
 

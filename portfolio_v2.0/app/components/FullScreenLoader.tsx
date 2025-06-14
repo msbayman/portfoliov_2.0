@@ -1,20 +1,41 @@
 'use client';
+import { useEffect, useState } from 'react';
 
 export default function FullScreenLoader() {
-    return (
-        <>
-            <div className="fixed inset-0 flex items-center justify-center bg-[var(--color-primary)] text-3xl text-[var(--color-accent-dark)]">
-                <span className="loader"></span>
-            </div>
+  const [visible, setVisible] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
-            <style jsx>{`
+  useEffect(() => {
+    // After 4.5s start fading out
+    const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
+    // After 5s hide completely
+    const hideTimer = setTimeout(() => setVisible(false), 5000);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <>
+      <div
+        className="fixed inset-0 flex items-center justify-center bg-[var(--color-primary)] text-3xl text-[var(--color-accent-dark)] transition-opacity duration-500"
+        style={{ opacity: fadeOut ? 0 : 1 }}
+      >
+        <span className="loader"></span>
+      </div>
+
+      <style jsx>{`
         .loader {
           position: relative;
           transform: rotateZ(45deg);
           perspective: 1000px;
           border-radius: 50%;
-          width: 100px;
-          height: 100px;
+          width: 48px;
+          height: 48px;
           color: #fff;
           display: inline-block;
         }
@@ -35,24 +56,6 @@ export default function FullScreenLoader() {
           color: #2bc196;
           transform: rotateY(70deg);
           animation-delay: 0.4s;
-        }
-
-        @keyframes rotate {
-          0% {
-            transform: translate(-50%, -50%) rotateZ(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotateZ(360deg);
-          }
-        }
-
-        @keyframes rotateccw {
-          0% {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotate(-360deg);
-          }
         }
 
         @keyframes spin {
@@ -83,6 +86,6 @@ export default function FullScreenLoader() {
           }
         }
       `}</style>
-        </>
-    );
+    </>
+  );
 }

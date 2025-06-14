@@ -1,32 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+'use client';
+
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
-import "./globals.css";
+import './globals.css';
+import FullScreenLoader from './components/FullScreenLoader';
+import { useEffect, useState } from 'react';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Welcome to my portfolio ."
-};
-
+const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' });
 
 const colfax = localFont({
   src: [
-    // Regular
-    {
-      path: '../public/fonts/Colfax-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
+    { path: '../public/fonts/Colfax-Regular.otf', weight: '400', style: 'normal' },
     {
       path: '../public/fonts/Colfax-RegularItalic.otf',
       weight: '400',
@@ -88,25 +75,29 @@ const colfax = localFont({
       style: 'italic',
     },
   ],
+
   variable: '--font-colfax',
   display: 'swap',
 });
 
+const metadata: Metadata = {
+  title: 'Portfolio',
+  description: 'Welcome to my portfolio.',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 5000);
+    return () => clearTimeout(timeout);
+  }, []);
 
 
-
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} ${colfax.variable} antialiased`}>
+        {loading ? <FullScreenLoader /> : children}
       </body>
     </html>
   );

@@ -10,7 +10,7 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from var(--angle), #28c392, #28385a);
+    background: conic-gradient(from var(--angle), #28c392, #3c568f);
     z-index: -1;
     animation: glowing_border 5s linear infinite;
 }
@@ -24,10 +24,10 @@
 
 @keyframes glowing_border {
     from {
-        --angle: 0deg;
+      --angle: 0deg;
     }
-
     to {
-        --angle: 360deg;
+      --angle: 360.0001deg;
     }
-}
+  }
+  

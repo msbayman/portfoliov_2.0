@@ -19,7 +19,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
             {items.map((item, index) => (
                 // <Magnet key={index} className="w-full">
 
-                <div key={index} className={`${styles.item_list}   flex w-fit mb-6`}>
+                <div key={index} className={`${styles.item_list} bg-[var(--color-secondary)] relative flex w-fit mb-6`}>
                     <div className={` text-xl flex items-center px-3 text-[var(--color-accent)] w-fit`}>
                         {item.date}
                     </div>

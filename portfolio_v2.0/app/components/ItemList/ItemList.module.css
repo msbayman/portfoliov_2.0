@@ -1,3 +1,33 @@
-.item_list{
-    border: 1px solid red;
+.item_list {
+    padding: 20px;
+}
+
+
+
+.item_list ::after {
+
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from var(--angle), #28c392, #28385a);
+    z-index: -1;
+    animation: glowing_border 5s linear infinite;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+@keyframes glowing_border {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
 }

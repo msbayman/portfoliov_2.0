@@ -5,16 +5,20 @@ import Navbar from "./components/Navbar";
 import Btn_accent_green from "./components/Btn_accent_green";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
-import Experience from "./sections/Experience";
+
 import { Contact } from "lucide-react";
 import Contacts from "./sections/contacts";
 import { IoIosCodeDownload, IoMdDownload } from "react-icons/io";
 import DrawOutlineButton from "./components/DrawOutlineButton";
 import BlurText from "./components/BlurText";
+import VantaBackground from "./components/VantaBackground";
+import Experience from "./sections/Experiences/Experience";
 
 export default function Home() {
   return (
-
+    <div className="relative flex flex-col min-h-screen overflow-hidden">
+      {/* Vanta background at the very back */}
+      {/* <VantaBackground /> */}
     <div className="flex flex-col min-h-svh ">
       <Navbar></Navbar>
       <section className="Home min-h-screen flex flex-col">
@@ -83,7 +87,7 @@ export default function Home() {
       </div>
 
     </div>
-
+</div>
   );
 }
 

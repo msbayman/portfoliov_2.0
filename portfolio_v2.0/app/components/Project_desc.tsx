@@ -39,7 +39,7 @@ const Project_desc = () => {
                     threshold={0.2}
                     delay={0.3}
                 >
-                    <div key={index} className="div_proj flex w-fit mb-6 hover:bg-[#333847] hover:rounded-2xl hover:cursor-pointer transition-all duration-300 ease-in-out">
+                    <div key={index} className=" flex w-fit mb-6 hover:bg-[#333847] hover:rounded-2xl hover:cursor-pointer transition-all duration-300 ease-in-out">
                         <div className="date_proj text-xl flex items-center px-3 text-[var(--color-accent)] w-fit">
                             {project.date}
                         </div>

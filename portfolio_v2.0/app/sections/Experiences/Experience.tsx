@@ -1,7 +1,8 @@
 // components/Experience.tsx
+import AnimatedContent from '@/app/components/AnimatedContent';
+import ItemList from '@/app/components/ItemList/ItemList';
 import React from 'react';
-import ItemList from '../components/ItemList';
-import AnimatedContent from '../components/AnimatedContent';
+
 
 
 const experiences = [

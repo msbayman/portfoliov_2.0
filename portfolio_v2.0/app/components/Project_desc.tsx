@@ -39,7 +39,7 @@ const Project_desc = () => {
                     delay={0.3}
 
                 >
-                    <div key={index} className=" flex w-fit mb-6 hover:bg-[#333847] hover:rounded-2xl hover:cursor-pointer transition-all duration-300 ease-in-out">
+                    <div key={index} className=" flex w-fit mb-6 hover:bg-[#333847] hover:rounded-2xl hover:cursor-pointer transition-all duration-300 ease-in-out p-3">
                         <div className="date_proj text-xl flex items-center px-3 text-[var(--color-accent)] w-fit">
                             {project.date}
                         </div>

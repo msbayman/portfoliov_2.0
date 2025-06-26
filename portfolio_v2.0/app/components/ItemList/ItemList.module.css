@@ -27,7 +27,7 @@
       --angle: 0deg;
     }
     to {
-      --angle: 360.0001deg;
+      --angle: 360deg;
     }
   }
   

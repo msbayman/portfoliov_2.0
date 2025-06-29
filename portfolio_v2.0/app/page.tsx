@@ -11,7 +11,7 @@ import Contacts from "./sections/contacts";
 import { IoIosCodeDownload, IoMdDownload } from "react-icons/io";
 import DrawOutlineButton from "./components/DrawOutlineButton";
 import BlurText from "./components/BlurText";
-import VantaBackground from "./components/VantaBackground";
+// import VantaBackground from "./components/VantaBackground";
 import Experience from "./sections/Experiences/Experience";
 
 export default function Home() {

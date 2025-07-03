@@ -8,8 +8,8 @@ export default function Navbar() {
     return (
         <>
             {/* NAVBAR */}
-            <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-50 border-b-[1px] border-b-gray-600 border-[var(--color-muted)] md:px-10 lg:px-20 ">
-                <ToggleDemo className="absolute right-5 top-20"  />
+            <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-70 border-b-[1px] border-b-gray-600 border-[var(--color-muted)] md:px-10 lg:px-20 ">
+                {!open && <ToggleDemo className="absolute right-5 top-20  z-1" />}
 
                 <h1 className="font-bold lg:text-2xl">0x0Miyamoto</h1>
                 {/* Desktop Nav */}
@@ -32,7 +32,7 @@ export default function Navbar() {
 
             {/* SLIDE-IN SIDEBAR */}
             <div
-                className={`fixed top-0 right-0 h-full w-64 bg-[var(--color-primary)] text-[var(--color-text-primary)] p-6 transform transition-transform duration-300 ease-in-out z-40 ${open ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed   z-60 top-15 right-0 h-full w-64 bg-[var(--color-primary)] text-[var(--color-text-primary)] p-6 transform transition-transform duration-300 ease-in-out ${open ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
                 <ul className="flex flex-col space-y-6 text-lg">

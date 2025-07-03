@@ -12,7 +12,7 @@ export function ToggleDemo({ className, ...props }: ToggleDemoProps) {
       className={cn(className)}
       {...props}
     >
-      <Bold className="h-4 w-4" />
+      <Bold className="h-4 w-4 z-1" />
     </Toggle>
   );
 }

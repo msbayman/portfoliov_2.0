@@ -1,18 +1,18 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // install with: npm i lucide-react
-import { ToggleDemo } from './Toggle_Demo'; // Adjust the import path as necessary
+import { Menu, X } from 'lucide-react'; 
+import { ToggleDemo } from './Toggle_Demo'; 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            {/* NAVBAR */}
+          
             <nav className="bg-[var(--color-primary)] text-[var(--color-text-primary)] p-4 flex justify-between items-center relative z-70 border-b-[1px] border-b-gray-600 border-[var(--color-muted)] md:px-10 lg:px-20 ">
-                {!open && <ToggleDemo className="absolute right-5 top-20  z-1" />}
+                {!open && <ToggleDemo className=" bg-transparent absolute right-5 top-20  z-1" />}
 
                 <h1 className="font-bold lg:text-2xl">0x0Miyamoto</h1>
-                {/* Desktop Nav */}
+              
                 <ul className="hidden md:flex space-x-6 ">
                     <li><a href="/" className="hover:text-white md:text-md lg:text-2xl">Home</a></li>
                     <li><a href="#about" className="hover:text-white md:text-md lg:text-2xl">About</a></li>
@@ -21,7 +21,7 @@ export default function Navbar() {
                     <li><a href="#Contact" className="hover:text-white md:text-md lg:text-2xl">Contact</a></li>
                 </ul>
 
-                {/* Hamburger Button (Mobile) */}
+    
                 <button
                     onClick={() => setOpen(!open)}
                     className="md:hidden transition-transform duration-300"
@@ -30,7 +30,7 @@ export default function Navbar() {
                 </button>
             </nav>
 
-            {/* SLIDE-IN SIDEBAR */}
+
             <div
                 className={`fixed   z-60 top-15 right-0 h-full w-64 bg-[var(--color-primary)] text-[var(--color-text-primary)] p-6 transform transition-transform duration-300 ease-in-out ${open ? 'translate-x-0' : 'translate-x-full'
                     }`}
@@ -44,7 +44,7 @@ export default function Navbar() {
                 </ul>
             </div>
 
-            {/* BACKDROP (click to close) */}
+   
             {open && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-30"

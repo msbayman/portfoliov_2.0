@@ -3,12 +3,13 @@
 import { Moon, Sun } from "lucide-react";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
+import { useTheme } from 'next-themes';
 import { useEffect, useState, type HTMLAttributes } from "react";
 
 interface ToggleDemoProps extends HTMLAttributes<HTMLButtonElement> { }
 
 export function ToggleDemo({ className, ...props }: ToggleDemoProps) {
-  const [theme_dark, setTheme_dark] = useState(true);
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -20,22 +21,21 @@ export function ToggleDemo({ className, ...props }: ToggleDemoProps) {
   return (
     <Toggle
       aria-label="Toggle theme"
-      className={cn(
-        "rounded-full p-2  ",
-        className
-      )}
+      className={cn("rounded-full p-2", className)}
       style={{
         background: "transparent",
         boxShadow: "0 0 0 1px var(--color-accent-dark)",
       }}
       onClick={(e) => {
-        setTheme_dark(!theme_dark);
+        e.stopPropagation();
+        setTheme(theme === "light" ? "dark" : "light");
       }}
+      {...props}
     >
-      {theme_dark ? (
-        <Sun className="h-4 w-4 text-white transition-all  " />
+      {theme === "light" ? (
+        <Moon className="h-4 w-4 text-[var(--color-accent-dark)]" />
       ) : (
-        <Moon className="h-4 w-4 text-[var(--color-accent-dark)] transition-all" />
+        <Sun className="h-4 w-4 text-white" />
       )}
     </Toggle>
   );

@@ -7,6 +7,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import FullScreenLoader from './components/FullScreenLoader';
 import { useEffect, useState } from 'react';
+import { ThemeProvider } from 'next-themes';
 
 const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' });
@@ -97,7 +98,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${colfax.variable} antialiased`}>
-        {loading ? <FullScreenLoader /> : children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false} 
+        >
+       {loading ? <FullScreenLoader /> : children}
+        </ThemeProvider>
       </body>
     </html>
   );

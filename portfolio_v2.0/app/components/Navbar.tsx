@@ -14,11 +14,11 @@ export default function Navbar() {
                 <h1 className="light:text-black  font-bold lg:text-2xl">0x0Miyamoto</h1>
 
                 <ul className="hidden md:flex space-x-6 ">
-                    <li><a href="/" className="  light:hover:text-green  hover:text-white md:text-md lg:text-2xl">Home</a></li>
-                    <li><a href="#about" className="hover:text-white md:text-md lg:text-2xl">About</a></li>
-                    <li><a href="#Projects" className="hover:text-white md:text-md lg:text-2xl">Projects</a></li>
-                    <li><a href="#Experiences" className="hover:text-white md:text-md lg:text-2xl">Experiences</a></li>
-                    <li><a href="#Contact" className="hover:text-white md:text-md lg:text-2xl">Contact</a></li>
+                    <li><a href="/" className="inline-block transform transition-transform duration-300 hover:text-white md:text-md lg:text-2xl light:hover:text-[var(--color-muted)] light:hover:scale-125">Home</a></li>
+                    <li><a href="#about" className="inline-block transform transition-transform duration-300 hover:text-white md:text-md lg:text-2xl light:hover:text-[var(--color-muted)] light:hover:scale-125">About</a></li>
+                    <li><a href="#Projects" className="inline-block transform transition-transform duration-300 hover:text-white md:text-md lg:text-2xl light:hover:text-[var(--color-muted)] light:hover:scale-125">Projects</a></li>
+                    <li><a href="#Experiences" className="inline-block transform transition-transform duration-300 hover:text-white md:text-md lg:text-2xl light:hover:text-[var(--color-muted)] light:hover:scale-125">Experiences</a></li>
+                    <li><a href="#Contact" className="inline-block transform transition-transform duration-300 hover:text-white md:text-md lg:text-2xl light:hover:text-[var(--color-muted)] light:hover:scale-125">Contact</a></li>
                 </ul>
 
 

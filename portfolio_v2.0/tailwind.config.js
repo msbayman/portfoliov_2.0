@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -8,25 +10,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Ensure red-500 is available (matches your light:hover:text-red-500)
-        red: {
-          500: '#ef4444',
-        },
-        // Add your custom colors from CSS variables for better Tailwind integration
+        red: { 500: '#ef4444' },
         primary: 'var(--color-primary)',
         'text-primary': 'var(--color-text-primary)',
         accent: 'var(--color-accent)',
-        // Add other custom colors as needed
+        muted: 'var(--color-muted)',
       },
     },
   },
-  plugins: [],
-  variants: {
-    extend: {
-      textColor: ['light', 'light:hover', 'dark', 'dark:hover'],
-      backgroundColor: ['light', 'dark'],
-      borderColor: ['light', 'dark'],
-      // Add other variants as needed
-    },
-  },
-}
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant('light-hover', '.light &:hover');
+    }),
+  ],
+};

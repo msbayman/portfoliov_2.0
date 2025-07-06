@@ -101,9 +101,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem={false} 
+          enableSystem={false}
         >
-       {loading ? <FullScreenLoader /> : children}
+          {loading ? <FullScreenLoader /> : children}
         </ThemeProvider>
       </body>
     </html>

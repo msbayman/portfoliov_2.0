@@ -90,6 +90,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && !localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+    }
     const timeout = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timeout);
   }, []);

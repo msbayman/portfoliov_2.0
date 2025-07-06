@@ -8,7 +8,7 @@ interface skill_name {
 
 const Skill_div: React.FC<skill_name> = ({ text }) => {
     return (
-        <div className='bg-[var(--color-accent-blue)] px-5 py-3 rounded-xl  text-[var(--color-accent)] hover:scale-150 cursor-default hover:text-[var(--color-accent-blue)] hover:bg-[var(--color-accent)] transition-all duration-500   '>{text}</div>
+        <div className=' light:text-white  bg-[var(--color-accent-blue)] px-5 py-3 rounded-xl  text-[var(--color-accent)] hover:scale-150 cursor-default hover:text-[var(--color-accent-blue)] hover:bg-[var(--color-accent)] transition-all duration-500   '>{text}</div>
     )
 }
 

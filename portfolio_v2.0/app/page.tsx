@@ -50,7 +50,7 @@ export default function Home() {
 
           <a href="../../Ayman-Msaoub-front.pdf" download="Ayman_Msaoub_Resume.pdf" className="flex items-center justify-center animate-bounce hover:animate-none transition-all duration-300 ease-in-out">
             <DrawOutlineButton className="  flex items-center justify-center ml-30 mb-10 ">
-              <IoIosCodeDownload className="size-36 " />
+                <IoIosCodeDownload className=" light:fill-[var(--color-text-muted)] size-36 " />
             </DrawOutlineButton>
 
           </a>

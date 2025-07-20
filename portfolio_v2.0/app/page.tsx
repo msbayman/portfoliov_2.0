@@ -1,93 +1,118 @@
-'use client';
-import { use } from "react";
+"use client"
 
-import Navbar from "./components/Navbar";
-import Btn_accent_green from "./components/Btn_accent_green";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
+import { useState, useEffect } from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Loader2 } from "lucide-react"
+import {
+  User,
+  Code,
+  FolderOpen,
+  GraduationCap,
+  MessageCircle,
+} from "lucide-react"
 
-import { Contact } from "lucide-react";
-import Contacts from "./sections/contacts";
-import { IoIosCodeDownload, IoMdDownload } from "react-icons/io";
-import DrawOutlineButton from "./components/DrawOutlineButton";
-import BlurText from "./components/BlurText";
-// import VantaBackground from "./components/VantaBackground";
-import Experience from "./sections/Experiences/Experience";
+// Components
+import { Header } from "@/components/header"
+import { LoadingScreen } from "@/components/loading-screen"
+import { IntroductionTab } from "@/components/tabs/introduction-tab"
+import { SkillsTab } from "@/components/tabs/skills-tab"
+import { ProjectsTab } from "@/components/tabs/projects-tab"
+import { EducationTab } from "@/components/tabs/education-tab"
+import { ContactTab } from "@/components/tabs/contact-tab"
 
-export default function Home() {
+export default function Portfolio() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState("introduction")
+  const [tabLoading, setTabLoading] = useState(false)
+
+  // Initial loading simulation
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Tab change loading simulation
+  const handleTabChange = (value: string) => {
+    if (value !== activeTab) {
+      setTabLoading(true)
+      setTimeout(() => {
+        setActiveTab(value)
+        setTabLoading(false)
+      }, 300)
+    }
+  }
+
+  if (isLoading) {
+    return <LoadingScreen />
+  }
+
   return (
-    <div className="relative flex flex-col min-h-screen overflow-hidden">
-      {/* Vanta background at the very back */}
-      {/* <VantaBackground /> */}
-    <div className="flex flex-col min-h-svh ">
-      <Navbar></Navbar>
-      <section className="Home min-h-screen flex flex-col">
-        {/* <h1 className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl"> */}
-          {/* Ayman msaoub */}
-        {/* </h1> */}
-        
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
 
+      {/* Main Content with Tabs */}
+      <div className="container mx-auto px-4 py-8">
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+          <TabsList className="grid w-full grid-cols-5 lg:grid-cols-5 mb-8 tabs-list">
+            <TabsTrigger
+              value="introduction"
+              className="flex items-center gap-2 tab-trigger"
+            >
+              <User className="w-4 h-4" />
+              <span className="hidden sm:inline">Introduction</span>
+            </TabsTrigger>
+            <TabsTrigger value="skills" className="flex items-center gap-2 tab-trigger">
+              <Code className="w-4 h-4" />
+              <span className="hidden sm:inline">Skills</span>
+            </TabsTrigger>
+            <TabsTrigger value="projects" className="flex items-center gap-2 tab-trigger">
+              <FolderOpen className="w-4 h-4" />
+              <span className="hidden sm:inline">Projects</span>
+            </TabsTrigger>
+            <TabsTrigger value="education" className="flex items-center gap-2 tab-trigger">
+              <GraduationCap className="w-4 h-4" />
+              <span className="hidden sm:inline">Education</span>
+            </TabsTrigger>
+            <TabsTrigger value="contact" className="flex items-center gap-2 tab-trigger">
+              <MessageCircle className="w-4 h-4" />
+              <span className="hidden sm:inline">Contact</span>
+            </TabsTrigger>
+          </TabsList>
 
-        <BlurText 
-          text="ayman msaoub"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          // onAnimationComplete={handleAnimationComplete}
-          className="text-4xl font-bold ml-10 mt-20 mb-7 md:text-6xl lg:mt-40 lg:mb-20 lg:text-8xl"
-        />
-        <h1 className="text-4xl text-[var(--color-accent-dark)] font-bold ml-10 mb-10 md:text-6xl lg:text-8xl">
-          Frontend Developer{" </>"}
-        </h1>
-        <p className="text-sm text-[var(--color-text-secondary)] ml-10  md:text-xl lg:text-1xl lg:ml-11 lg:mb-2">
-          I am a frontend developer with a passion for creating beautiful and
-          functional user interfaces.</p>
-        <p className="text-sm text-[var(--color-text-secondary)] ml-10 mb-10 md:text-xl lg:text-1xl lg:ml-11 lg:mb-20">
-          I have experience in HTML, CSS, JavaScript,
-          and React.</p>
-        {/* <Btn_accent_green text="resume "  /> */}
-        <div className="flex w-full items-center justify-center">
+          {tabLoading && (
+            <div className="flex items-center justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </div>
+          )}
 
-          <a href="../../Ayman-Msaoub-front.pdf" download="Ayman_Msaoub_Resume.pdf" className="flex items-center justify-center animate-bounce hover:animate-none transition-all duration-300 ease-in-out">
-            <DrawOutlineButton className="  flex items-center justify-center ml-30 mb-10 ">
-                <IoIosCodeDownload className=" light:fill-[var(--color-text-muted)] size-36 " />
-            </DrawOutlineButton>
+          {/* Introduction Tab */}
+          <TabsContent value="introduction" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
+            <IntroductionTab />
+          </TabsContent>
 
-          </a>
-        </div>
+          {/* Skills Tab */}
+          <TabsContent value="skills" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
+            <SkillsTab />
+          </TabsContent>
 
-        <a href="#about">
-          <div className="flex flex-col items-center h-full opacity-70 mt-20 justify-center   mb-10 lg:mb-20 hover:cursor-pointer  transition-all duration-300 ease-in-out hover:opacity-100">
-            <h1 className="lg:text-3xl font-light  ">see  more info</h1>
+          {/* Projects Tab */}
+          <TabsContent value="projects" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
+            <ProjectsTab />
+          </TabsContent>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down "><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
-          </div>
-        </a>
+          {/* Education Tab */}
+          <TabsContent value="education" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
+            <EducationTab />
+          </TabsContent>
 
-
-      </section>
-
-      <div id="about">
-        <About />
+          {/* Contact Tab */}
+          <TabsContent value="contact" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
+            <ContactTab />
+          </TabsContent>
+        </Tabs>
       </div>
-
-      <div id="Projects" className="w-full h-fit flex items-center justify-center">
-        <Projects />
-      </div>
-
-      <div id="Experiences" className="w-full h-fit flex items-center justify-center" >
-        <Experience
-        />
-      </div>
-
-
-
-      <div id="Contact" className="w-full h-fit flex items-center justify-center" >
-        <Contacts></Contacts>
-      </div>
-
     </div>
-</div>
-  );
+  )
 }
-

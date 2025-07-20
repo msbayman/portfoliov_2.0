@@ -19,6 +19,7 @@ export function SkillsTab() {
                         key={category.title}
                         className={`enhanced-shadow card-hover card-gradient`}
                     >
+                        
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Code className="w-5 h-5" />

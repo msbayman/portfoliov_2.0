@@ -107,6 +107,8 @@ export default function Portfolio() {
             <EducationTab />
           </TabsContent>
 
+
+
           {/* Contact Tab */}
           <TabsContent value="contact" className={`space-y-8 ${tabLoading ? "hidden" : ""}`}>
             <ContactTab />

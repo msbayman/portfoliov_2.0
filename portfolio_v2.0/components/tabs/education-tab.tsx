@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCap, MapPin } from "lucide-react"
 import { education } from "@/lib/data"
+import SplitText from "../ui/SplitText"
 
 export function EducationTab() {
     return (
@@ -23,7 +24,21 @@ export function EducationTab() {
                             <CardTitle className="flex items-center justify-between">
                                 <div className="flex items-center gap-3">
                                     <GraduationCap className="w-6 h-6 text-primary" />
-                                    {edu.school}
+                                    
+                                    <SplitText
+                                        text={edu.school}
+                                        className="text-2xl font-semibold text-center"
+                                        delay={100}
+                                        duration={0.6}
+                                        ease="power3.out"
+                                        splitType="chars"
+                                        from={{ opacity: 0, y: 40 }}
+                                        to={{ opacity: 1, y: 0 }}
+                                        threshold={0.1}
+                                        rootMargin="-100px"
+                                        textAlign="center"
+                                        // onLetterAnimationComplete={handleAnimationComplete}
+                                    />
                                 </div>
                                 <Badge variant="outline">{edu.period}</Badge>
                             </CardTitle>

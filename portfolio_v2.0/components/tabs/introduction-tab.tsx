@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Github, Linkedin, Download } from "lucide-react"
 import Image from "next/image"
 import { expertiseAreas } from "@/lib/data"
+import DecryptedText from "../ui/DecryptedText"
 
 export function IntroductionTab() {
     return (
@@ -28,10 +29,27 @@ export function IntroductionTab() {
                 </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent animate-slide-up">
-                Ayman Msaoub
+                <DecryptedText
+                    text="Ayman Msaoub"
+                    speed={100}
+                    maxIterations={20}
+                    characters="ABCD1234!?"
+                    className="revealed"
+                    parentClassName="all-letters"
+                    encryptedClassName="encrypted"
+                />
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up animation-delay-200">
-                Web Developer & Software Engineer
+                
+                <DecryptedText
+                    text="Web Developer & Software Engineer"
+                    speed={100}
+                    maxIterations={20}
+                    characters="ABCD1234!?"
+                    className="revealed"
+                    parentClassName="all-letters"
+                    encryptedClassName="encrypted"
+                />
             </p>
 
             <div className="max-w-3xl mx-auto mb-8 animate-slide-up animation-delay-400">

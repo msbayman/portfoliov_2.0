@@ -82,8 +82,8 @@ export function ContactTab() {
                                     <ul className="text-sm text-muted-foreground space-y-1">
                                         <li>• Full-time opportunities</li>
                                         <li>• Freelance projects</li>
-                                        <li>• Collaboration</li>
-                                        <li>• Mentorship</li>
+                                        {/* <li>• Collaboration</li>
+                                        <li>• Mentorship</li> */}
                                     </ul>
                                 </div>
                             </div>

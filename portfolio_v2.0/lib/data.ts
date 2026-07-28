@@ -2,6 +2,12 @@ export const skills = [
     "TypeScript",
     "Tailwind",
     "Django",
+    "Express",
+    "Web3",
+    "k3s",
+    "k3d",
+    "Argo CD",
+    "Ansible",
     "Git",
     "NextJs",
     "Redux",
@@ -14,6 +20,7 @@ export const skills = [
     "Material UI",
     "Python",
     "Shell",
+
 ]
 
 export const projects = [
@@ -25,7 +32,6 @@ export const projects = [
             "Recreation of essential C standard library functions. This foundational project involved implementing string manipulation, memory management, and utility functions that serve as building blocks for all subsequent projects.",
         category: "lowlevel",
         technologies: ["C", "Makefile", "Memory Management"],
-        date: "Nov 2022",
         image: "/projects_images/libft.png"
     },
     {
@@ -35,7 +41,6 @@ export const projects = [
             "Implementation of a function that reads content line by line from files, stdin, or network connections. Essential for file processing and will be reused throughout the curriculum.",
         category: "lowlevel",
         technologies: ["C", "File I/O", "Buffer Management"],
-        date: "Nov 2022",
         image: "/projects_images/get_next_line.webp"
     },
     {
@@ -45,7 +50,6 @@ export const projects = [
             "Complete recreation of the printf function with variadic functions implementation. Handles multiple format specifiers and provides formatted output functionality.",
         category: "lowlevel",
         technologies: ["C", "Variadic Functions", "String Formatting"],
-        date: "Nov 2022",
         image: "/projects_images/ft_printf.png"
     },
     {
@@ -55,7 +59,7 @@ export const projects = [
             "Advanced sorting algorithm implementation using two stacks with a limited set of operations. Optimizes for the minimum number of moves to sort data efficiently.",
         category: "algorithms",
         technologies: ["C", "Sorting Algorithms", "Stack Operations", "Optimization"],
-        date: "Jan 2023",
+        // date: "Jan 2023",
         image: "/projects_images/push_swap.gif"
     },
     {
@@ -65,7 +69,7 @@ export const projects = [
             "Implementation of a fully functional Unix shell with command parsing, execution, built-in commands, pipes, redirections, and environment variable handling.",
         category: "lowlevel",
         technologies: ["C", "Unix System Calls", "Process Management", "Parsing"],
-        date: "Jun 2023",
+        // date: "Jun 2023",
         image: "/projects_images/minishell.png"
     },
     {
@@ -75,7 +79,7 @@ export const projects = [
             "Multithreading project simulating the dining philosophers problem. Focuses on concurrent programming, mutex handling, and deadlock prevention.",
         category: "lowlevel",
         technologies: ["C", "Multithreading", "Mutex", "Concurrent Programming"],
-        date: "Jun 2023",
+        // date: "Jun 2023",
         image: "/projects_images/philo.jpg"
     },
     {
@@ -85,7 +89,7 @@ export const projects = [
             "Implementation of Unix pipes and redirections, simulating shell pipe behavior. Deepens understanding of process communication and file descriptor management.",
         category: "lowlevel",
         technologies: ["C", "Unix Pipes", "Process Communication", "File Descriptors"],
-        date: "Feb 2023",
+        // date: "Feb 2023",
         image: "/projects_images/pipex.gif"
     },
 
@@ -97,7 +101,7 @@ export const projects = [
             "2D game development using minilibx graphics library. Features sprite animation, texture mapping, and basic game mechanics with player movement and collectibles.",
         category: "graphics",
         technologies: ["C", "MinilibX", "2D Graphics", "Game Logic"],
-        date: "Jan 2023",
+        // date: "Jan 2023",
         image: "/projects_images/so_long.gif"
     },
     {
@@ -107,7 +111,7 @@ export const projects = [
             "3D raycasting engine inspired by Wolfenstein 3D. Implements ray-casting algorithms to create a dynamic first-person perspective view inside a maze environment.",
         category: "graphics",
         technologies: ["C", "Raycasting", "3D Graphics", "MinilibX", "Mathematics"],
-        date: "Oct 2023",
+        // date: "Oct 2023",
         image: "/projects_images/cub3d.jpg"
     },
 
@@ -119,7 +123,7 @@ export const projects = [
             "System administration project involving Linux server setup, security configuration, user management, and service installation including web servers, DNS, and mail services.",
         category: "devops",
         technologies: ["Linux", "System Administration", "Security", "Virtualization"],
-        date: "Dec 2022",
+        // date: "Dec 2022",
         image: "/projects_images/born2beroot.webp"
     },
     {
@@ -129,7 +133,7 @@ export const projects = [
             "Comprehensive networking exercise covering IP addressing, subnetting, routing, and network configuration. Practical approach to understanding network fundamentals.",
         category: "devops",
         technologies: ["Networking", "TCP/IP", "Subnetting", "Routing"],
-        date: "Jul 2023",
+        // date: "Jul 2023",
         image: "/projects_images/net_practice.png"
     },
     {
@@ -139,7 +143,7 @@ export const projects = [
             "Advanced Docker containerization project creating a complete web server environment with Nginx, WordPress, and MariaDB containers. Each service runs in isolation for enhanced security and scalability.",
         category: "devops",
         technologies: ["Docker", "Docker Compose", "Nginx", "WordPress", "MariaDB"],
-        date: "Feb 2024",
+        // date: "Feb 2024",
         image: "/projects_images/Docker_pic.png"
     },
 
@@ -151,7 +155,7 @@ export const projects = [
             "Comprehensive C++ learning path covering OOP principles, memory management, inheritance, polymorphism, templates, STL containers, and advanced C++ features through 10 progressive modules.",
         category: "oop",
         technologies: ["C++", "OOP", "Templates", "STL", "Memory Management"],
-        date: "Oct 2023 - Jan 2024",
+        // date: "Oct 2023 - Jan 2024",
         image: "/projects_images/c++.webp"
     },
 
@@ -163,7 +167,7 @@ export const projects = [
             "Complete IRC (Internet Relay Chat) server implementation in C++. Fully compatible with official IRC clients, supporting multiple channels, user authentication, and real-time messaging.",
         category: "networking",
         technologies: ["C++", "Socket Programming", "IRC Protocol", "Network Programming"],
-        date: "Mar 2024",
+        // date: "Mar 2024",
         image: "/projects_images/IRC.jpg"
     },
 
@@ -175,9 +179,56 @@ export const projects = [
             "Advanced full-stack web application featuring a multiplayer Pong game with real-time chat, user authentication (OAuth), matchmaking system, and comprehensive user management. Demonstrates modern web development practices.",
         category: "fullstack",
         technologies: ["TypeScript", "React", "Django", "WebSocket", "OAuth", "PostgreSQL"],
-        date: "Mar 2025",
+        // date: "Mar 2025",
         image: "/projects_images/ft_rans.jpg"
     },
+
+    {id: 16,
+        title: "Torrent Movies Streaming Website",
+        description: "A modern streaming platform for browsing and watching movies and TV shows, featuring a clean UI, search functionality, and user reviews.",
+        category: "fullstack",
+        technologies: ["Next.js", "Node.js", "Express","Django", "PostgreSQL", "Tailwind CSS"],
+        // date: "Apr 2024",
+        image: "/projects_images/torrent_movies.jpg"
+    }
+    ,{id: 17,
+        title: "Bgp At Doors of Autonomous Systems is Simple",
+        description: "An educational resource explaining the basics of BGP (Border Gateway Protocol) in a simple and accessible manner.",
+        category: "networking",
+        technologies: ["BGP", "Networking", "Internet Protocols", "Routing" ,"SPF"],
+        // date: "May 2024",
+        image: "/projects_images/bgp.jpg"
+    },
+   {
+    id: 18,
+    title: "Tokenize",
+    description: "A decentralized application for creating and managing ERC-20 tokens on the Ethereum blockchain using Solidity smart contracts.",
+    category: "Web3",
+    technologies: ["Web3", "Blockchain", "Smart Contracts", "Ethereum", "Solidity"],
+    image: "/projects_images/web3_nft.jpg"
+},
+{
+    id: 19,
+    title: "TokenizeArt",
+    description: "A Web3 NFT marketplace that enables users to mint, own, and manage ERC-721 digital collectibles on the Ethereum blockchain.",
+    category: "Web3",
+    technologies: ["Web3", "Blockchain", "Smart Contracts", "Ethereum", "Solidity"],
+    image: "/projects_images/web3_voting.jpg"
+},
+{
+    id: 20,
+    title: "Cloud-1",
+    description: "Provisioned and automated cloud infrastructure on AWS EC2 using Terraform and Ansible, deploying containerized applications with Docker ",
+    category: "devops",
+    technologies: ["AWS EC2", "Terraform", "Ansible", "Docker", "CI/CD"],
+},
+{
+    id: 21,
+    title: "Orchestrator",
+    description: "A Kubernetes orchestration project based on 42's Inception of Things, deploying applications with K3s, Argo CD, GitHub Actions, and GitOps practices.",
+    category: "devops",
+    technologies: ["Kubernetes", "K3s", "Argo CD", "GitHub Actions", "Docker", "GitOps"],
+}
 ]
 
 export const categories = [
@@ -189,6 +240,7 @@ export const categories = [
     { id: "networking", label: "Networking" },
     { id: "algorithms", label: "Algorithms" },
     { id: "oop", label: "Object-Oriented" },
+    { id: "Web3", label: "Web3" },
 ]
 
 export const education = [
@@ -237,13 +289,13 @@ export const socialLinks = [
 
 export const skillCategories = [
     { title: "Frontend", skills: ["ReactJs", "NextJs", "TypeScript", "Tailwind", "Material UI", "Redux"] },
-    { title: "Backend", skills: ["Django", "Python", "RESTful APIs", "SQL"] },
-    { title: "DevOps & Tools", skills: ["Docker", "Git", "Shell", "C", "C++"] },
+    { title: "Backend", skills: ["Express", "Django", "Python", "RESTful APIs", "SQL"] },
+    { title: "DevOps & Tools", skills: ["k3s", "k3d" ,"Argo CD" , "Ansible","Docker", "Git", "Shell", "C", "C++"] },
 ]
 
 export const expertiseAreas = [
     { title: "Systems Programming", desc: "C/C++, Unix, Multithreading" },
-    { title: "DevOps & Infrastructure", desc: "Docker, Linux, Networking" },
+    { title: "DevOps & Infrastructure", desc: "k3s, k3d, Docker, Linux, Networking" },
     // { title: "Graphics & Games", desc: "3D Raycasting, 2D Games" },
     { title: "Full-Stack Web", desc: "React, Django, WebSocket" },
 ] 

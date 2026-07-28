@@ -222,7 +222,7 @@ export const projects = [
     description: "Provisioned and automated cloud infrastructure on AWS EC2 using Terraform and Ansible, deploying containerized applications with Docker ",
     category: "devops",
     technologies: ["AWS EC2", "Terraform", "Ansible", "Docker", "CI/CD"],
-    image: "/projects_images/cloud.png"
+    image: "/projects_images/cloude.png"
 },
 {
     id: 21,
@@ -230,7 +230,7 @@ export const projects = [
     description: "A Kubernetes orchestration project based on 42's Inception of Things, deploying applications with K3s, Argo CD, GitHub Actions, and GitOps practices.",
     category: "devops",
     technologies: ["Kubernetes", "K3s", "Argo CD", "GitHub Actions", "Docker", "GitOps"],
-    image: "/projects_images/IOT.png"
+    image: "/projects_images/iot.png"
 }
 ]
 

@@ -205,15 +205,16 @@ export const projects = [
     description: "A decentralized application for creating and managing ERC-20 tokens on the Ethereum blockchain using Solidity smart contracts.",
     category: "Web3",
     technologies: ["Web3", "Blockchain", "Smart Contracts", "Ethereum", "Solidity"],
-    image: "/projects_images/web3_nft.jpg"
-},
+    image: "/projects_images/token.png"
+},  
+
 {
     id: 19,
     title: "TokenizeArt",
     description: "A Web3 NFT marketplace that enables users to mint, own, and manage ERC-721 digital collectibles on the Ethereum blockchain.",
     category: "Web3",
     technologies: ["Web3", "Blockchain", "Smart Contracts", "Ethereum", "Solidity"],
-    image: "/projects_images/web3_voting.jpg"
+    image: "/projects_images/token_art.jpg"
 },
 {
     id: 20,
@@ -221,6 +222,7 @@ export const projects = [
     description: "Provisioned and automated cloud infrastructure on AWS EC2 using Terraform and Ansible, deploying containerized applications with Docker ",
     category: "devops",
     technologies: ["AWS EC2", "Terraform", "Ansible", "Docker", "CI/CD"],
+    image: "/projects_images/cloud.png"
 },
 {
     id: 21,
@@ -228,6 +230,7 @@ export const projects = [
     description: "A Kubernetes orchestration project based on 42's Inception of Things, deploying applications with K3s, Argo CD, GitHub Actions, and GitOps practices.",
     category: "devops",
     technologies: ["Kubernetes", "K3s", "Argo CD", "GitHub Actions", "Docker", "GitOps"],
+    image: "/projects_images/IOT.png"
 }
 ]
 

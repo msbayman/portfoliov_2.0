@@ -197,7 +197,7 @@ export const projects = [
         category: "networking",
         technologies: ["BGP", "Networking", "Internet Protocols", "Routing" ,"SPF"],
         // date: "May 2024",
-        image: "/projects_images/bgp.jpg"
+        image: "/projects_images/bgp-ospf.png"
     },
    {
     id: 18,
